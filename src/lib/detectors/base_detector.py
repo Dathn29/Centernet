@@ -91,9 +91,7 @@ class BaseDetector(object):
     elif type(image_or_path_or_tensor) == type (''): 
       image = cv2.imread(image_or_path_or_tensor)
     else:
-      image = image_or_path_or_tensor['image'][0].numpy()
-      pre_processed_images = image_or_path_or_tensor
-      pre_processed = True
+      image = image_or_path_or_tensor
     
     loaded_time = time.time()
     load_time += (loaded_time - start_time)
